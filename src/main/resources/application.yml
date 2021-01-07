@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/java?useUnicode=true&serverTimezone=GMT&useSSL=false&characterEncoding=utf8
+    username: root
+    password: root
+  thymeleaf:
+    check-template: false
+    check-template-location: false
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  mapper-locations: classpath:mapper/project/*Mapper.xml
+  type-aliases-package: com.curd.demo.entity
+
+logging:
+  level:
+    root: warn
+    com.curd.demo.dao: trace
+  pattern:
+    console: '%p%m%n'
